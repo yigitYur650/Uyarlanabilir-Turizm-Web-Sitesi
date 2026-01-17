@@ -1,13 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: 'export', // Statik site çıktısı (out klasörü) için kritik satır
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'images.pexels.com',
-      },
-    ],
+    unoptimized: true, // Statik exportlarda resimlerin hata vermemesi için gerekli
   },
 };
 
